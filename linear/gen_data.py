@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 
 # bias
-bias = -23.5
+bias = -8.584
 
 # dimensions 5
 weights = [4, 2.34, -1.4, 2.689, 6.6]
@@ -22,7 +22,7 @@ def gen_data(length, filename):
 
     for x in range(0, length):
         vec = [random.uniform(-20, 20) for x in range(0, 5)]
-        val = np.dot(vec, weights)
+        val = np.dot(vec, weights) + bias
         vec = [val] + vec
 
         ft.append(vec)
